@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,600&family=Raleway:ital,wght@0,100;0,200;1,100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --main-bg: #1e272e;
+    --main-color: #0097e6;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+}
+
+.main_menu {
+
+    padding: 20px;
+    background-color: #17CAF6;
+}
+
+.navbar a {
+    color: white !important;
+    font-size: 2rem;
+}
+
+.toggle-color-change {
+    background-color: white !important;
+    border: 1px solid white !important;
+}
+
+.active {
+    background: #6996F4;
+    border-radius: 5px;
+}
+
+.navbar-nav li {
+    margin-right: 10px;
+}
+
+@media(max-width:768px) {
+    .active {
+        width: 36%;
+        text-align: center;
+    }
+}
+
+.main_header_left p {
+    font-size: 2rem;
+    color: #817878;
+    font-weight: 500;
+}
+
+.main_header_left h1 {
+    color: #817878;
+    font-weight: 600;
+
+}
+
+.mybutton {
+    background: #6996F4;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 9px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 6pc;
+    border: 1px solid #6996F4;
+    outline: none !important;
+    cursor: pointer;
+    transition: 1.5s;
+    animation: rot1 1s linear;
+
+    /* animation: dd duration timing-function delay iteration-count direction fill-mode; */
+}
+
+.mybutton:hover {
+    background: white;
+    color: black;
+
+}
+
+.footer p {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.main_header_left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fa-snowflake {
+    animation: rot 2s linear infinite;
+}
+
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rot1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(160deg);
+    }
+
+    40% {
+        transform: rotate(260deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.tempInfo {
+    width: 40rem;
+    margin: auto;
+    min-height: 20rem;
+    background-color: #6996F4;
+    color: white;
+    border-radius: 1rem;
+    /* padding: 1rem; */
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.topLayout {
+    width: 100%;
+    height: 20%;
+    padding: 1rem;
+    background-color: #436ec7;
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    font-size: 1.5rem;
+}
+
+.mainLayout {
+    padding: 1rem;
+     width: 100%;
+     height: 80%;
+     display: flex;
+     flex-direction: column;
+}
+.mainLayout #cityName{
+    /* padding: 2rem 0; */
+    font-size: 2rem;
+}
+#result{
+    font-size: 2rem;
+
+}
+.mainLayout .middle_layer{
+    display: flex;
+    justify-content: space-around;
+    font-size: 7rem;
+    font-weight: bold;
+}
+.data_hide{
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+.temp_form{
+    width: 66%;
+    position: relative;
+    margin: 3rem auto;
+}
+.temp_form input[type='text']{
+    width: 100%;
+    padding: 2rem 5rem 2rem 2rem;
+    background-color: #6996F4;
+    color: white;
+    outline: none!important;
+    border: none;
+    font-size: 1.5rem;
+    border-radius:3rem ;
+    font-weight: bold;
+}
+#cityname::placeholder{
+    color: white;
+
+}
+.temp_form input[type='submit']{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background:  white;
+
+    bottom: 5px;
+    border: none;
+    border: 1px solid white;
+    outline: none !important;
+    padding: 0 3rem;
+    border-radius: 3rem;
+    color: black;
+    font-size: 1.6rem;
+    animation: rot1 1s linear;
+    cursor: pointer;
+    transition: 1.5s;
+
+}
+.temp_form input[type='submit']:hover{
+    background:  none;
+       color: white;
+}
+@media (max-width:760px){
+    .tempInfo{
+        width: 31rem!important;
+    }
+    .temp_form{
+        width: 97%!important;
+    }
+}

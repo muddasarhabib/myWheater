@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        {{>top_links}}
+    </head>
+
+    <body>
+
+        {{>header}}
+        <!-- main content -->
+        <div class="container-fluid main_header">
+            <div class="row" style="margin-top: 21px;">
+                <div class="col-md-10 col-12 mb-2 mx-auto">
+                    <div class="main_content">
+                        <form class="temp_form" id="tempreature_form" data-aos="fade-left"  data-aos-duration="2000">
+                            <input type="text" id="cityname" placeholder="Enter Your City Name" autocomplete="off">
+                            <input type="submit" value="Enter" id="submitBtn">
+                        </form>
+                    </div>
+                    <div class="tempInfo" data-aos="fade-right"  data-aos-duration="2000">
+                        <div class="topLayout">
+                            <p id="day">Sunday</p>
+                            <p id="today_date">13 Oct</p>
+                        </div>
+                        <div class="mainLayout">
+                            <p id="result">Get Result Here</p>
+       
+                            <div class="middle_layer data_hide" id="data_hide">
+                                <p id="temp"><span id="tempreature">12</span>&#176;C</p>
+                                <p id="temp_status"><i class="fa fa-cloud"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        <!-- foooter -->
+        {{>footer}}
+
+        {{>footer_links}}
+
+    </body>
+
+</html>
